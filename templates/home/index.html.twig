@@ -6,5 +6,10 @@
 {% block body %}
     <div class="container">
         <h1 class="my-5">On s'amuse avec Twig !</h1>
+        {{ prenom | badge }}
+        {{ "nom" | badge({'color':'danger','rounded':true}) }}
+        <p>la personne est adule :
+        {{ adulte | booleanBadge({'trueText':'Adulte','falseText':'Enfant'})}}
+        </p>
     </div>
 {% endblock %}
